@@ -4,8 +4,8 @@ const Product = {
 
     createproduct: async (req,res) => {
         try {
-            const {productname, price, category, inStock, image} = req.body
-            // const image = req.files ? req.files.map(file =>  `${req.protocol}://${req.get('host')}/uploads/${file.filename}`) : [];
+            const {productname, price, category, inStock} = req.body
+            const image = req.files ? req.files.map(file =>  `${req.protocol}://${req.get('host')}/uploads/${file.filename}`) : [];
 
             if(productname && price && category && inStock && image){
                  const doc = new ProductModel({

@@ -7,7 +7,7 @@ routes.post("/registration", User.registration)
 routes.post("/login", User.login)
 
 
-routes.post("/products", upload.array('propertimage', 5), Product.createproduct)
+routes.post("/products", upload.array('image', 5), Product.createproduct)
 routes.get("/products", Product.AllProduct)
 routes.get("/products/:id", Product.ProductByID)
 routes.put("/products/:id", Product.ProductUpdate)
@@ -15,4 +15,4 @@ routes.delete("/products/:id",Product.ProductDelete)
 
 
 
-export default routes
+export default routes 
